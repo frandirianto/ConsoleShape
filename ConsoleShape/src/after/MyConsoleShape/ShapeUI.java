@@ -55,7 +55,7 @@ public class ShapeUI{
 
 	private void createShape(){
 		if(count>20){
-			System.out.println(" [*]cannot create new shape. the container is full(20 at most).");
+			System.out.println(" [*]cannot create new shape. the container is full(20 at most).\n");
 			return;
 		}
 		menu.subMenu();
@@ -96,9 +96,9 @@ public class ShapeUI{
 
 		for(int i=0; i<count; i++){
 			if(shapes[i].getName().equals(name)){
-				System.out.println("Found : "+(i+1)
-						+" shapeClass: "
-						+Shape.shapeNames[Shape.getShapeClass(shapes[i])]);
+				System.out.println("Found : "+(i+1) + "\n"
+						+" shapeClass: " 
+						+Shape.shapeNames[Shape.getShapeClass(shapes[i])] + "\n");
 				return;
 			}
 		}
@@ -112,8 +112,8 @@ public class ShapeUI{
 		sn = MyScanner.scanInteger();
 		if(sn < count) {
 			for(int i = 0; i < sn; i++){
-				System.out.println("sn: "+(i+1)
-						+" name: "+shapes[i].getName()
+				System.out.println("sn: "+(i+1) + "\n"
+						+" name: "+shapes[i].getName() + "\n"
 						+" shapeClass: "+Shape.shapeNames[Shape.getShapeClass(shapes[i])]);
 				shapes[i].Draw();
 			}
