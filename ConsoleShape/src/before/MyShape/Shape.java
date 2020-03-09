@@ -1,4 +1,4 @@
-package MyShape;
+package before.MyShape;
 
 /**
  * A test class, Java course at <strong><em>Xidian University,Xi'an</em></strong>.

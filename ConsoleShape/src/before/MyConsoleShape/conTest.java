@@ -1,9 +1,12 @@
-package MyConsoleShape;
+package before.MyConsoleShape;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-import MyShape.*;
+import before.MyShape.Circle;
+import before.MyShape.Rectangle;
+import before.MyShape.Shape;
+import before.MyShape.Triangle;
 
 public class conTest {
 

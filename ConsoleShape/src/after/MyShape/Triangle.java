@@ -1,12 +1,13 @@
-package MyShape;
+package after.MyShape;
 
-/**
- * A test class, Java course at <strong><em>Xidian University,Xi'an</em></strong>.
- * @author Dash Wong
- * 
- * */
+import java.util.Scanner;
+
+import after.scanner.MyScanner;
+
 public final class Triangle extends Shape {
+	
 	private int edge1, edge2, edge3;
+	private Scanner scan = MyScanner.getInstance();
 	
 	public Triangle(){
 		this.shapeClass = Shape.TRIANGLE;
@@ -25,6 +26,7 @@ public final class Triangle extends Shape {
 		this.edge3 = edge3;
 		return true;
 	}
+	
 	public int[] getEdges(){
 		int[] edges = {this.edge1, this.edge2, this.edge3};
 		return edges;
@@ -42,6 +44,14 @@ public final class Triangle extends Shape {
 	public boolean equals(Triangle tri){
 		return (tri.edge1+tri.edge2+tri.edge3 == edge1+edge2+edge3 &&
 		        tri.edge1*tri.edge2*tri.edge3 == edge1*edge2*edge3);
+	}
+	
+	public Triangle newTriangle() {
+		String name;
+		System.out.print("[new Triangle]Enter a name> ");
+		name = scan.next();
+		
+		return new Triangle(name);
 	}
 	
 	@Override
